@@ -1,0 +1,81 @@
+<div>
+  
+<div class='intro'>
+  <h2>
+  Produkt Kataloge 
+  <small>Jetzt unverbindlich bestellen</small>
+</h2>
+</div>
+<div class='col-md-4 col-sm-4'>
+  
+</div>
+<div class='col-md-8 col-sm-8 well'>
+  <form class='form-vertical'>
+    <div class='col-md-4'>
+      {{#each SprLanding.dummyCatalogs}}
+        <div class='col-md-6 col-sm-3 col-xs-6'>
+          <div class='box'>
+            <div class='media'>
+              <img {{bind-attr src=logo_url}} >
+            </div>
+            <div class='box-body'>
+              <label>
+                <input type='checkbox' name='catalog_order[catalog_ids][]' {{bind-attr value=id}} checked='checked' class='checkbox'>
+                {{organisation_name}}
+              </label>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    <div class='col-md-8'>
+      <div class='form-group col-md-6'>
+        <label for='firstname'><small>Name</small></label>
+        <input name='firstname' type='text' placeholder='Vorname' required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='lastname'><small>Nachname</small></label>
+        <input name='lastname' type='text' placeholder='Nachname' required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='email'><small>Email</small></label>
+        <input name='email' type='email' placeholder='Email'  required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='phone'><small>Telefon</small></label>
+        <input name='phone' type='tel' placeholder='Telefon'  required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='strasse'><small>Strasse</small></label>
+        <input name='street' type='text' placeholder='Strasse'  required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='nr'><small>Hausnummer</small></label>
+        <input name='nr' type='text' placeholder='Nr.'  required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='zip'><small>Postleitzahl</small></label>
+        <input name='zip' type='text' placeholder='PLZ'  required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='city'><small>Stadt</small></label>
+        <input name='city' type='text' placeholder='Stadt'  required='required' class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-6'>
+        <label for='date_of_birth'><small>Geburtsdatum</small></label>
+        <input name='date_of_birth' type='date' required='required', placeholder: 'Geburtstag', class='form-control input-sm'>
+      </div>
+      <div class='form-group col-md-12'>
+        <button type='submit' class='btn btn-primary btn-lg pull-right'><span class='glyphicon glyphicon-send'> </span> Jetzt Bestellen!</button>
+      </div>
+      <div class='col-md-12'>
+      <small class='help-block'>
+        <input type='checkbox' name='catalog_order[terms_and_condistions]' checked='checked'>&nbsp;
+      Mit der Absendung der Bestellung erkläre Ich mich bereit, dass meine Kontaktdaten an die von mir ausgewählte(n) Veranstalter
+     weitergeleitet und für den kostenlosen Newsletterversand verwendet werden dürfen. Per Klick auf den Abmeldelink im Newsletter, kann ich diesen jederzeit abbestellen. Außerdem, gestatte ich mich auch telefonisch zu beraten. 
+      </small>
+    </div>
+    </div>
+  </form>
+</div>
+</div>

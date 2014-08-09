@@ -1,0 +1,51 @@
+$icon-font-path: "../styles/fonts/"; // Change the path to the fonts
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+/* Put your CSS here */
+html, body {
+    margin: 0;
+}
+
+.img-header {
+  background: url(http://lorempixel.com/700/300/transport) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 50vh;
+  margin-bottom: 30px;
+  padding: 60px;
+  h1 {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+    color: white;
+  }
+}
+
+.container {
+  min-height: 400px;
+  margin-top: 30px;
+  .intro {
+    margin-bottom: 2em;
+  }
+}
+
+.box {
+  @include box-shadow(lightgrey 1px 1px 7px);
+  margin-bottom: 2em;
+  .media { 
+    width: 100%;
+    padding: 0;
+    img { 
+      width: 100%; 
+      height: auto;
+    }
+  }
+  .box-body {
+    padding: 1em;
+  }
+}
