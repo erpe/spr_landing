@@ -1,0 +1,72 @@
+<form class='form-vertical' {{action createCatalogOrder on='submit'}} >
+  <div class='col-md-4'>
+    {{#each model }}
+      <div class='col-md-12 col-sm-6 col-xs-6'>
+        <div class='box'>
+          <div class='media'>
+            <img {{bind-attr src=organisation_logo_url}} class='img img-circle'>
+          </div>
+          <div class='box-body'>
+            <label>
+              <input type='checkbox' name='catalogIds' {{bind-attr value=id}} checked='checked' class='checkbox'>
+              {{organisation_name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class='col-md-8'>
+
+    <div class='form-group col-md-6' >
+      <label for='firstname'><small>Name</small></label>
+      {{input required='required' value=fields.firstname class='form-control input-sm' placeholder='Vorname'  }}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='lastname'><small>Nachname</small></label>
+      {{input required='required' value=fields.lastname class='form-control input-sm' placeholder='Nachname'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='email'><small>Email</small></label>
+      {{input required='required' type='email' value=fields.email class='form-control input-sm' placeholder='Email'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='phone'><small>Telefon</small></label>
+      {{input required='required' value=fields.phone class='form-control input-sm' placeholder='Telefon'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='strasse'><small>Strasse</small></label>
+      {{input required='required' value=fields.street class='form-control input-sm' placeholder='Strasse'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='nr'><small>Hausnummer</small></label>
+      {{input required='required' value=fields.nr class='form-control input-sm' placeholder='Hausnummer'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='zip'><small>Postleitzahl</small></label>
+      {{input required='required' value=fields.zip class='form-control input-sm' placeholder='Postleitzahl'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='city'><small>Stadt</small></label>
+      {{input required='required' value=fields.city class='form-control input-sm' placeholder='Stadt'}}
+    </div>
+    <div class='form-group col-md-6'>
+      <label for='date_of_birth'><small>Geburtsdatum</small></label>
+      {{input required='required' type='date' value=fields.dateOfBirth class='form-control input-sm' placeholder='Geburtsdatum'}}
+    </div>
+    <div class='form-group col-md-12'>
+      <button type='submit' class='btn btn-primary btn-lg pull-right'>
+        <span class='glyphicon glyphicon-send'> </span> Jetzt Bestellen!
+      </button>
+    </div>
+    <div class='col-md-12'>
+      <small class='help-block'>
+        {{input type='checkbox' checked=fields.termsAndConditions class='checkbox' required='required'  }}
+      Mit der Absendung der Bestellung erkläre Ich mich bereit, dass meine Kontaktdaten an die von mir ausgewählte(n) Veranstalter
+     weitergeleitet und für den kostenlosen Newsletterversand verwendet werden dürfen. Per Klick auf den Abmeldelink im Newsletter, kann ich diesen jederzeit abbestellen. Außerdem, gestatte ich mich auch telefonisch zu beraten. 
+      </small>
+    </div>
+
+  </div>
+</form>
+

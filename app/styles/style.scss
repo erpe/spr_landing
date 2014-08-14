@@ -35,11 +35,12 @@ html, body {
 }
 
 .box {
-  @include box-shadow(lightgrey 1px 1px 7px);
+  @include box-shadow(rgba(200,200,200,0.1) 1px 1px 1px);
+  background-color: white;
   margin-bottom: 2em;
   .media { 
     width: 100%;
-    padding: 0;
+    padding: 10px;
     img { 
       width: 100%; 
       height: auto;

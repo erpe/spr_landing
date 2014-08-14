@@ -1,34 +1,19 @@
 SprLanding = window.SprLanding = Ember.Application.create(
-  {
-    LOG_TRANSITION: true,
-    LOG_ACTIVE_GENERATION: true
-  }
+  LOG_TRANSITION: true,
+  LOG_ACTIVE_GENERATION: true
 )
 
+Ember.RadioButton = Ember.View.extend(
+  tagName: "input",
+  type: "radio",
+  attributeBindings: [ "name", "type", "value", "checked:checked:" ]
+  click:  ->
+     @set("selection", this.$().val())
 
-SprLanding.testWord = "a testword"
-SprLanding.dummyCatalogs =  [
-  {
-    id: 1,
-    organisation_name: 'Foo',
-    logo_url: "http://lorempixel.com/50/50/business"
-  },
-  {
-    id: 2,
-    organisation_name: 'Bar',
-    logo_url: "http://lorempixel.com/50/50/business"
-  },
-  {
-    id: 3,
-    organisation_name: 'Baz',
-    logo_url: "http://lorempixel.com/50/50/business"
-  },
-  {
-    id: 4,
-    organisation_name: 'Fnord',
-    logo_url: "http://lorempixel.com/50/50/business"
-  }
-]
+  checked: ( ->
+    return @get("value") == this.get("selection")
+  ).property()
+)
 
 # Order and include as you please.
 require 'scripts/controllers/*'
