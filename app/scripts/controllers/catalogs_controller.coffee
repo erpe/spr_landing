@@ -23,6 +23,7 @@ SprLanding.CatalogsController = Ember.ObjectController.extend(
       console.log("id_txt: " + id_txt)
 
       console.log("fields: " + @get('fields').lastname)
+      console.log('target-audience' + @get('fields').targetAudience )
       fields = @get('fields')
       orga_ids = { catalogIds: "["+id_txt+"]"}
       tmp = $.extend(tmp, fields, orga_ids )
@@ -34,7 +35,14 @@ SprLanding.CatalogsController = Ember.ObjectController.extend(
       #  #catalogIds: "[" + cids.join(',') + "]",
       #  termsAndConditions: true
       #})
+
+      failure: (reason) ->
+        console.log("Failure arose - " + reason)
+
+      onFail: =>
+        console.log("onFail caught")
+
       catalog_order.save().then =>
-        @transitionToRoute('catalogorder')
+        @transitionToRoute('catalogorder', catalog_order)
       
 )

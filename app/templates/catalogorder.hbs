@@ -1,17 +1,11 @@
-<h1>CatalogOrder</h1>
+<h1>Vielen Dank für Deine Bestellung {{model.firstname }}</h1>
 
-<table>
-  {{#each model.attributes}}
-  <tr>
-    <td>
-      <strong>{{this.key}}:</strong>
-    </td>
-    <td>
-      {{this.value}}
-    </td>
-  </tr>
-  {{/each}}
-</table>
-
-
-{{outlet}}
+<p>
+  Deine Bestellung sollte in den nächsten Tagen bei Dir eintreffen.
+  <br />Falls es länger dauern sollte, dann kannst du gerne bei uns nachfragen.
+</p>
+<p>
+  Bis dahin empfehlen wir dir dich bei unseren Sprachreise-Angeboten umzuschauen:
+  <i class='glyphicon glyphicon-heart'> </i> 
+  <a href="{{mothertHost}}" title="{{motherHost}}">{{motherHost}}</a> 
+</p> 

@@ -1,6 +1,6 @@
 SprLanding.CatalogorderRoute = Ember.Route.extend(
-
-  model: ->
-    @get('store').find('catalog')
-
- )
+  motherHost: "http://www.example.com"
+  model: (params) ->
+    console.log("CatalogOrderRoute - params: " + params)
+    params
+)

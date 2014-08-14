@@ -24,8 +24,14 @@ html, body {
     font-size: 4em;
     color: white;
   }
+  img {
+    margin: 1em;
+  }
 }
 
+.lobster {
+  font-family: 'Lobster', cursive;
+}
 .container {
   min-height: 400px;
   margin-top: 30px;

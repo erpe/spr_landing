@@ -27,6 +27,8 @@ SprLanding.CatalogOrder = DS.Model.extend
     catalogIds: attr('string')
 
     termsAndConditions: attr('boolean')
+
+    targetAudience: attr('string')
     
 
 # probably should be mixed-in...
@@ -52,6 +54,7 @@ SprLanding.CatalogOrder.FIXTURES = [
     zip: 'foo',
     date_of_birth: 'foo',
     catalog_ids: 'foo',
+    target_audience: 'youth'
   },
 
   {
@@ -65,6 +68,7 @@ SprLanding.CatalogOrder.FIXTURES = [
     zip: 'foo',
     date_of_birth: 'foo',
     catalog_ids: 'foo',
+    target_audience: 'youth'
   },
 
 ]

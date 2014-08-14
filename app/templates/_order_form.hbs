@@ -39,11 +39,11 @@
     </div>
     <div class='form-group col-md-6'>
       <label for='targetAudienceYouth'>
-        {{view Ember.RadioButton name="targetAudience" selectionBinding=fields.targetAudience value="youth"  class='radiobutton' checked='checked'}}
+        {{view Ember.RadioButton name="targetAudience" selectionBinding='fields.targetAudience' value="youth"  class='radiobutton' checked='checked'}}
         <small>Jugend-Sprachreisen</small>
       </label>
       <label for='targetAudienceYouth'>
-        {{view Ember.RadioButton name="targetAudience" selectionBinding=fields.targetAudience value=fields.targetAudience class='radiobutton' }}
+        {{view Ember.RadioButton name="targetAudience" selectionBinding='fields.targetAudience' value='adult' class='radiobutton' }}
         <small>Erwachsenen-Sprachreisen</small>
       </label>
     </div>
