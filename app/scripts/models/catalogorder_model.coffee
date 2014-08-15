@@ -3,32 +3,19 @@ hasMany = DS.hasMany
 attr = DS.attr
 
 SprLanding.CatalogOrder = DS.Model.extend
-#SprLanding.CatalogOrder = Em.Oject.extend
-#
 
-    firstname: attr('string')
-    
-    lastname: attr('string')
-    
-    city: attr('string')
-    
-    email: attr('string')
-    
-    street: attr('string')
-    
-    nr: attr('string')
-    
-    zip: attr('string')
-
-    countryCode: attr('string')
-    
-    dateOfBirth: attr('string')
-    
-    catalogIds: attr('string')
-
-    termsAndConditions: attr('boolean')
-
-    targetAudience: attr('string')
+  firstname: attr('string')
+  lastname: attr('string')
+  city: attr('string')
+  email: attr('string')
+  street: attr('string')
+  nr: attr('string')
+  zip: attr('string')
+  countryCode: attr('string')
+  dateOfBirth: attr('string')
+  catalogIds: attr('string')
+  termsAndConditions: attr('boolean')
+  targetAudience: attr('string')
     
 
 # probably should be mixed-in...
@@ -39,6 +26,11 @@ SprLanding.CatalogOrder.reopen
     Em.keys(@get('data')).map (key)->
       Em.Object.create(model: model, key: key, valueBinding: 'model.' + key)
   ).property()
+
+
+SprLanding.CatalogOrder.reopenClass
+  valid: (fields) ->
+    fields.firstname and fields.lastname and fields.email and fields.street and fields.zip and fields.nr and fields.dateOfBirth and fields.termsAndConditions
 
 # delete below here if you do not want fixtures
 SprLanding.CatalogOrder.FIXTURES = [

@@ -1,15 +1,18 @@
 <div>
-
-<div class='col-md-6 col-sm-4'>
-  <h2 class='lobster'>Unverbindlich Kataloge anfordern</h2>
-  <p class="lead">Lieferung in  2-4 Werktagen </br>
-  Einfach Formular ausfüllen.
-  </p>
-</div>
-<div class='col-md-6 col-sm-8 well'>
-  {{partial 'order_form'}}
-</div>
-{{outlet}}
-
+  <div class='col-md-6 col-sm-4'>
+    <h2 class='lobster'>Unverbindlich Kataloge anfordern</h2>
+    <p class="lead">Lieferung in  2-4 Werktagen </br>
+      Einfach Formular ausfüllen.
+    </p>
+  </div>
+  <div class='col-md-6 col-sm-8 well'>
+    {{#if showError }}
+    <div class='error'>
+      <p class='text-danger'>Ein Fehler ist aufgetreten: <strong>{{showError}}</strong></p>
+    </div>
+    {{/if}}
+    {{partial 'order_form'}}
+  </div>
+  {{outlet}}
 </div>
 
