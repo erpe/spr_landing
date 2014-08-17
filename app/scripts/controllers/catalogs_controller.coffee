@@ -24,7 +24,6 @@ SprLanding.CatalogsController = Ember.ObjectController.extend(
         catalog_order = @get('store').createRecord('catalogOrder', tmp)
         
         onSuccess = (catalog_order) =>
-          console.log("in onS")
           @transitionToRoute('catalogorder', catalog_order)
 
         onError = (catalog_order) =>
