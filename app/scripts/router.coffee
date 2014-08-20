@@ -11,3 +11,11 @@ SprLanding.Router.map( ->
   @route('impressum')
   
 )
+
+
+SprLanding.Router.reopen
+  notifyPiwikAnalytics: ( ->
+    u = this.get('url')
+    console.log("tracking url: " + u)
+    return PiwikAnalytics.trackPageView(u)
+  ).on('didTransition')

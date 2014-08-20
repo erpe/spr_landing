@@ -1,17 +1,6 @@
 #SprLanding.ApplicationAdapter = DS.FixtureAdapter
-
-
-#DS.attr.transforms.array = {
-#  from: (serialized) ->
-#    return serialized
-#
-#  to: (deserialized) ->
-#    return deserialized
-#  }
-
-
-SprLanding.ApplicationAdapter = DS.ActiveModelAdapter.extend
 #SprLanding.ApplicationAdapter = DS.RESTAdapter.extend
+SprLanding.ApplicationAdapter = DS.ActiveModelAdapter.extend
 
   host: 'http://localhost:3000'
   namespace: 'api/v1'
